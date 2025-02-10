@@ -1,0 +1,350 @@
+[2025-02-10 13:46:49.656 +02:00 INF] Starting the application
+[2025-02-10 13:48:02.528 +02:00 INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Department], [e].[Email], [e].[IsActive], [e].[JoinDate], [e].[Name], [e].[Salary]
+FROM [Employees] AS [e]
+[2025-02-10 13:52:45.765 +02:00 INF] Starting the application
+[2025-02-10 13:52:58.249 +02:00 INF] Calculating average salary for department ID: null
+[2025-02-10 13:52:58.992 +02:00 INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Department], [e].[Email], [e].[IsActive], [e].[JoinDate], [e].[Name], [e].[Salary]
+FROM [Employees] AS [e]
+[2025-02-10 13:52:59.009 +02:00 WRN] No employees found for department ID: null
+[2025-02-10 13:54:18.480 +02:00 INF] Calculating average salary for department ID: 1
+[2025-02-10 13:54:18.585 +02:00 INF] Executed DbCommand (13ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Department], [e].[Email], [e].[IsActive], [e].[JoinDate], [e].[Name], [e].[Salary]
+FROM [Employees] AS [e]
+WHERE [e].[Department] IS NOT NULL AND [e].[Department] = @__ToString_0
+[2025-02-10 13:54:18.589 +02:00 WRN] No employees found for department ID: 1
+[2025-02-10 13:54:36.444 +02:00 INF] Calculating average salary for department ID: 1
+[2025-02-10 13:54:36.504 +02:00 INF] Executed DbCommand (1ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Department], [e].[Email], [e].[IsActive], [e].[JoinDate], [e].[Name], [e].[Salary]
+FROM [Employees] AS [e]
+WHERE [e].[Department] IS NOT NULL AND [e].[Department] = @__ToString_0
+[2025-02-10 13:54:36.507 +02:00 WRN] No employees found for department ID: 1
+[2025-02-10 13:54:46.477 +02:00 INF] Calculating average salary for department ID: 1
+[2025-02-10 13:54:46.481 +02:00 INF] Executed DbCommand (0ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Department], [e].[Email], [e].[IsActive], [e].[JoinDate], [e].[Name], [e].[Salary]
+FROM [Employees] AS [e]
+WHERE [e].[Department] IS NOT NULL AND [e].[Department] = @__ToString_0
+[2025-02-10 13:54:46.484 +02:00 WRN] No employees found for department ID: 1
+[2025-02-10 13:58:05.110 +02:00 INF] Starting the application
+[2025-02-10 13:58:13.999 +02:00 INF] Calculating average salary for all employees
+[2025-02-10 13:58:14.832 +02:00 INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Department], [e].[Email], [e].[IsActive], [e].[JoinDate], [e].[Name], [e].[Salary]
+FROM [Employees] AS [e]
+[2025-02-10 13:58:14.850 +02:00 WRN] No employees found
+[2025-02-10 14:06:51.636 +02:00 INF] Starting the application
+[2025-02-10 14:07:03.913 +02:00 ERR] An unhandled exception occurred. Status Code: 401, Trace ID: 0HNA9PDKHJ3T2:00000005, Message: Unauthorized access
+System.UnauthorizedAccessException: You do not have permission to access this resource.
+   at Logging.Controllers.EmployeesController.ThrowUnauthorizedException() in C:\Users\A.Mohsen\source\repos\logg\Logging\Controllers\EmployeesController.cs:line 203
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Logging.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\A.Mohsen\source\repos\logg\Logging\Middleware\GlobalExceptionMiddleware.cs:line 29
+[2025-02-10 14:10:03.720 +02:00 INF] Starting the application
+[2025-02-10 14:10:53.109 +02:00 ERR] An unhandled exception occurred. Status Code: 404, Trace ID: 0HNA9PFP3SH4C:00000005, Message: Resource not found
+System.Collections.Generic.KeyNotFoundException: Employee with ID 1 was not found.
+   at Logging.Controllers.EmployeesController.ThrowNotFoundException(Int32 employeeId) in C:\Users\A.Mohsen\source\repos\logg\Logging\Controllers\EmployeesController.cs:line 220
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Logging.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\A.Mohsen\source\repos\logg\Logging\Middleware\GlobalExceptionMiddleware.cs:line 29
+[2025-02-10 14:10:54.329 +02:00 ERR] An unhandled exception occurred. Status Code: 404, Trace ID: 0HNA9PFP3SH4C:00000007, Message: Resource not found
+System.Collections.Generic.KeyNotFoundException: Employee with ID 1 was not found.
+   at Logging.Controllers.EmployeesController.ThrowNotFoundException(Int32 employeeId) in C:\Users\A.Mohsen\source\repos\logg\Logging\Controllers\EmployeesController.cs:line 220
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Logging.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\A.Mohsen\source\repos\logg\Logging\Middleware\GlobalExceptionMiddleware.cs:line 29
+[2025-02-10 14:12:56 INF] Starting the application {}
+[2025-02-10 14:13:42 INF] Creating new employee: Ahmed {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"b1faff08-7764-4eac-b857-c9d4e7f65611","ActionName":"Logging.Controllers.EmployeesController.CreateEmployee (Logging)","RequestId":"0HNA9PH3BKHNU:00000005","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+[2025-02-10 14:13:44 ERR] An error occurred using the connection to database 'EmployeeDb' on server '(localdb)\mssqllocaldb'. {"EventId":{"Id":20004,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection","ActionId":"b1faff08-7764-4eac-b857-c9d4e7f65611","ActionName":"Logging.Controllers.EmployeesController.CreateEmployee (Logging)","RequestId":"0HNA9PH3BKHNU:00000005","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+[2025-02-10 14:13:44 ERR] An exception occurred in the database while saving changes for context type 'Logging.Data.ApplicationDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "EmployeeDb" requested by the login. The login failed.
+Login failed for user 'ASIS-EGYPT\A.Mohsen'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:4bea5daa-9441-482b-8841-940b5cdfb949
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) {"EventId":{"Id":10000,"Name":"Microsoft.EntityFrameworkCore.Update.SaveChangesFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Update","ActionId":"b1faff08-7764-4eac-b857-c9d4e7f65611","ActionName":"Logging.Controllers.EmployeesController.CreateEmployee (Logging)","RequestId":"0HNA9PH3BKHNU:00000005","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "EmployeeDb" requested by the login. The login failed.
+Login failed for user 'ASIS-EGYPT\A.Mohsen'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:4bea5daa-9441-482b-8841-940b5cdfb949
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+[2025-02-10 14:13:44 ERR] Error occurred while creating employee: Ahmed {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"b1faff08-7764-4eac-b857-c9d4e7f65611","ActionName":"Logging.Controllers.EmployeesController.CreateEmployee (Logging)","RequestId":"0HNA9PH3BKHNU:00000005","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "EmployeeDb" requested by the login. The login failed.
+Login failed for user 'ASIS-EGYPT\A.Mohsen'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:4bea5daa-9441-482b-8841-940b5cdfb949
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Logging.Controllers.EmployeesController.CreateEmployee(Employee employee) in C:\Users\A.Mohsen\source\repos\logg\Logging\Controllers\EmployeesController.cs:line 78
+[2025-02-10 14:13:48 INF] Retrieving all employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"384ea856-ac16-4821-91d2-05dbd1924ea0","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PH3BKHNU:00000007","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+[2025-02-10 14:13:48 ERR] An error occurred using the connection to database 'EmployeeDb' on server '(localdb)\mssqllocaldb'. {"EventId":{"Id":20004,"Name":"Microsoft.EntityFrameworkCore.Database.Connection.ConnectionError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Connection","ActionId":"384ea856-ac16-4821-91d2-05dbd1924ea0","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PH3BKHNU:00000007","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+[2025-02-10 14:13:48 ERR] An exception occurred while iterating over the results of a query for context type 'Logging.Data.ApplicationDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "EmployeeDb" requested by the login. The login failed.
+Login failed for user 'ASIS-EGYPT\A.Mohsen'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:4bea5daa-9441-482b-8841-940b5cdfb949
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync() {"EventId":{"Id":10100,"Name":"Microsoft.EntityFrameworkCore.Query.QueryIterationFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"384ea856-ac16-4821-91d2-05dbd1924ea0","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PH3BKHNU:00000007","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "EmployeeDb" requested by the login. The login failed.
+Login failed for user 'ASIS-EGYPT\A.Mohsen'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:4bea5daa-9441-482b-8841-940b5cdfb949
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+[2025-02-10 14:13:48 ERR] Error occurred while retrieving employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"384ea856-ac16-4821-91d2-05dbd1924ea0","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PH3BKHNU:00000007","RequestPath":"/api/Employees","ConnectionId":"0HNA9PH3BKHNU"}
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "EmployeeDb" requested by the login. The login failed.
+Login failed for user 'ASIS-EGYPT\A.Mohsen'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+ClientConnectionId:4bea5daa-9441-482b-8841-940b5cdfb949
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Logging.Controllers.EmployeesController.GetEmployees() in C:\Users\A.Mohsen\source\repos\logg\Logging\Controllers\EmployeesController.cs:line 33
+[2025-02-10 14:17:03 FTL] Application failed to start {}
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\A.Mohsen\source\repos\logg\Logging\Program.cs:line 35
+[2025-02-10 14:17:17 FTL] Application failed to start {}
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\A.Mohsen\source\repos\logg\Logging\Program.cs:line 35
+[2025-02-10 14:17:28 INF] Starting the application {}
+[2025-02-10 14:21:46 INF] Starting the application {}
+[2025-02-10 14:22:55 INF] Starting the application {}
+[2025-02-10 14:23:35 INF] Created new employee: Mohamed with ID 1 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"d18f148b-9455-4597-91b3-52b0519034bf","ActionName":"Logging.Controllers.EmployeesController.CreateEmployee (Logging)","RequestId":"0HNA9PMN3QH2M:00000005","RequestPath":"/api/Employees","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:23:41 INF] Retrieving all employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"42ef0610-0bcd-448e-a405-6908498d2106","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PMN3QH2M:00000007","RequestPath":"/api/Employees","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:23:41 INF] Successfully retrieved 1 employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"42ef0610-0bcd-448e-a405-6908498d2106","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PMN3QH2M:00000007","RequestPath":"/api/Employees","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:03 INF] Created new employee: Mohaaamed with ID 2 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"d18f148b-9455-4597-91b3-52b0519034bf","ActionName":"Logging.Controllers.EmployeesController.CreateEmployee (Logging)","RequestId":"0HNA9PMN3QH2M:00000009","RequestPath":"/api/Employees","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:09 INF] Retrieving all employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"42ef0610-0bcd-448e-a405-6908498d2106","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PMN3QH2M:0000000F","RequestPath":"/api/Employees","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:09 INF] Successfully retrieved 2 employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"42ef0610-0bcd-448e-a405-6908498d2106","ActionName":"Logging.Controllers.EmployeesController.GetEmployees (Logging)","RequestId":"0HNA9PMN3QH2M:0000000F","RequestPath":"/api/Employees","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:22 INF] Retrieving employee with ID: 1 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"04f12464-1779-4e4f-b871-b99386a68c12","ActionName":"Logging.Controllers.EmployeesController.GetEmployee (Logging)","RequestId":"0HNA9PMN3QH2M:00000011","RequestPath":"/api/Employees/1","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:22 INF] Successfully retrieved employee with ID: 1 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"04f12464-1779-4e4f-b871-b99386a68c12","ActionName":"Logging.Controllers.EmployeesController.GetEmployee (Logging)","RequestId":"0HNA9PMN3QH2M:00000011","RequestPath":"/api/Employees/1","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:23 INF] Retrieving employee with ID: 1 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"04f12464-1779-4e4f-b871-b99386a68c12","ActionName":"Logging.Controllers.EmployeesController.GetEmployee (Logging)","RequestId":"0HNA9PMN3QH2M:00000013","RequestPath":"/api/Employees/1","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:23 INF] Successfully retrieved employee with ID: 1 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"04f12464-1779-4e4f-b871-b99386a68c12","ActionName":"Logging.Controllers.EmployeesController.GetEmployee (Logging)","RequestId":"0HNA9PMN3QH2M:00000013","RequestPath":"/api/Employees/1","ConnectionId":"0HNA9PMN3QH2M"}
+[2025-02-10 14:24:49 ERR] Exception Occurred: Resource not found | Type: NotFound | Path: /api/Employees/throw-not-found | Method: GET | Client IP: ::1 | Trace ID: 0HNA9PMN3QH2M:00000015 {"SourceContext":"Logging.Middleware.GlobalExceptionMiddleware","RequestId":"0HNA9PMN3QH2M:00000015","ConnectionId":"0HNA9PMN3QH2M"}
+System.Collections.Generic.KeyNotFoundException: Employee with ID 3 was not found.
+   at Logging.Controllers.EmployeesController.ThrowNotFoundException(Int32 employeeId) in C:\Users\A.Mohsen\source\repos\logg\Logging\Controllers\EmployeesController.cs:line 240
+   at lambda_method94(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Logging.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\A.Mohsen\source\repos\logg\Logging\Middleware\GlobalExceptionMiddleware.cs:line 30
+[2025-02-10 14:24:50 ERR] Exception Occurred: Resource not found | Type: NotFound | Path: /api/Employees/throw-not-found | Method: GET | Client IP: ::1 | Trace ID: 0HNA9PMN3QH2M:00000017 {"SourceContext":"Logging.Middleware.GlobalExceptionMiddleware","RequestId":"0HNA9PMN3QH2M:00000017","ConnectionId":"0HNA9PMN3QH2M"}
+System.Collections.Generic.KeyNotFoundException: Employee with ID 3 was not found.
+   at Logging.Controllers.EmployeesController.ThrowNotFoundException(Int32 employeeId) in C:\Users\A.Mohsen\source\repos\logg\Logging\Controllers\EmployeesController.cs:line 240
+   at lambda_method94(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Logging.Middleware.GlobalExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\A.Mohsen\source\repos\logg\Logging\Middleware\GlobalExceptionMiddleware.cs:line 30
+[2025-02-10 14:29:45 INF] Starting the application {}
+[2025-02-10 14:30:25 ERR] Exception Occurred: Resource not found | Type: NotFound | Path: /api/Employees/throw-not-found | Method: GET | Client IP: ::1 | Trace ID: 0HNA9PQMK48CU:00000005 {"SourceContext":"Logging.Middleware.GlobalExceptionMiddleware","RequestId":"0HNA9PQMK48CU:00000005","ConnectionId":"0HNA9PQMK48CU"}
+[2025-02-10 14:31:35 INF] Calculating average salary for all employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"326e0747-69bc-49b6-9897-c0ab72d2bcd2","ActionName":"Logging.Controllers.EmployeesController.GetAverageSalary (Logging)","RequestId":"0HNA9PQMK48CU:00000007","RequestPath":"/api/Employees/average-salary","ConnectionId":"0HNA9PQMK48CU"}
+[2025-02-10 14:31:36 INF] Average salary calculated: 727611.00 for 2 employees {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"326e0747-69bc-49b6-9897-c0ab72d2bcd2","ActionName":"Logging.Controllers.EmployeesController.GetAverageSalary (Logging)","RequestId":"0HNA9PQMK48CU:00000007","RequestPath":"/api/Employees/average-salary","ConnectionId":"0HNA9PQMK48CU"}
+[2025-02-10 14:38:31 INF] Starting the application {}
+[2025-02-10 14:44:47 INF] Starting the application {}
+[2025-02-10 14:44:52 ERR] An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNA9Q2RC24UD:00000003","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNA9Q2RC24UD"}
+[2025-02-10 14:44:57 ERR] An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNA9Q2RC24UD:00000007","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNA9Q2RC24UD"}
+[2025-02-10 14:47:01 INF] Starting the application {}
+[2025-02-10 14:50:55 INF] Starting the application {}
+[2025-02-10 14:53:53 INF] Starting the application {}
+[2025-02-10 14:54:08 ERR] Error occurred while dividing 3 by 0 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"4b79e554-8d05-4c58-a84c-263c76c69288","ActionName":"Logging.Controllers.EmployeesController.Calculator (Logging)","RequestId":"0HNA9Q7U1E805:00000005","RequestPath":"/api/Employees/calculator","ConnectionId":"0HNA9Q7U1E805"}
