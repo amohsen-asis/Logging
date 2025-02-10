@@ -269,7 +269,21 @@ namespace Logging.Controllers
             throw new InvalidOperationException("An unexpected error occurred in the system.");
         }
 
-        // Add method to seed sample employees
+        [HttpGet("calculator")]
+        public IActionResult Calculator(int numerator, int denominator)
+        {
+            try 
+            {
+                int result = numerator / denominator;
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while dividing {Numerator} by {Denominator}", numerator, denominator);
+                return StatusCode(400, "Cannot divide by zero");
+            }
+        }
+
         [HttpPost("seed-employees")]
         public async Task<IActionResult> SeedEmployees()
         {
@@ -326,20 +340,7 @@ namespace Logging.Controllers
         }
 
         // GET: api/Employees/calculator
-        [HttpGet("calculator")]
-        public IActionResult Calculator(int numerator, int denominator)
-        {
-            try 
-            {
-                int result = numerator / denominator;
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error occurred while dividing {Numerator} by {Denominator}", numerator, denominator);
-                return StatusCode(400, "Cannot divide by zero");
-            }
-        }
+        
 
         private bool EmployeeExists(int id)
         {
