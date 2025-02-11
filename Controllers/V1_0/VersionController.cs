@@ -1,26 +1,34 @@
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Reflection;
-using Microsoft.AspNetCore.Mvc;
 
-namespace Logging.Controllers.V1_0.Version
+namespace Logging.Controllers.V1_0;
+
+[Route("api/v1.0/[controller]")]
+[ApiController]
+public class VersionController : ControllerBase
 {
-    [Route("api/v1.0/[controller]")]
-    [ApiController]
-    public class VersionController : ControllerBase
-    {
-        [HttpGet]
-        public IActionResult GetVersion()
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            var fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+    private readonly IWebHostEnvironment _environment;
 
-            return Ok(new
-            {
-                AssemblyVersion = assembly.GetName().Version?.ToString(),
-                FileVersion = fileVersionInfo.FileVersion,
-                ProductVersion = fileVersionInfo.ProductVersion,
-                Environment = System.Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"
-            });
-        }
+    public VersionController(IWebHostEnvironment environment)
+    {
+        _environment = environment;
+    }
+
+    [HttpGet]
+    public IActionResult GetVersion()
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        var version = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
+        var fileVersion = FileVersionInfo.GetVersionInfo(assembly.Location).FileVersion;
+        var assemblyVersion = assembly.GetName().Version?.ToString();
+
+        return Ok(new
+        {
+            AssemblyVersion = assemblyVersion,
+            FileVersion = fileVersion,
+            ProductVersion = version,
+            Environment = _environment.EnvironmentName
+        });
     }
 }

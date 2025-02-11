@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Logging.Data;
 using Serilog;
+using Logging.Data;
+using Logging.Services;
 using Logging.Middleware;
+using Microsoft.OpenApi.Models;
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
@@ -23,7 +25,10 @@ try
     // Add services to the container.
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
+    builder.Services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Employee API", Version = "v1" });
+    });
 
     // Add DbContext
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
