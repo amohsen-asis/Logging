@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mEWo9kUz9BU=",
+  "dgSpecHash": "sJhGaBT58rE=",
   "success": true,
   "projectFilePath": "C:\\Users\\A.Mohsen\\source\\repos\\logg\\Logging\\Logging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\A.Mohsen\\.nuget\\packages\\gitversion.msbuild\\5.12.0\\gitversion.msbuild.5.12.0.nupkg.sha512",
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\A.Mohsen\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

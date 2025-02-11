@@ -163,3 +163,5 @@ C:\Users\A.Mohsen\source\repos\logg\Logging\bin\Debug\net8.0\System.Text.Encodin
 C:\Users\A.Mohsen\source\repos\logg\Logging\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\A.Mohsen\source\repos\logg\Logging\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\A.Mohsen\source\repos\logg\Logging\obj\Debug\net8.0\Logging.sourcelink.json
+C:\Users\A.Mohsen\source\repos\logg\Logging\obj\Debug\net8.0\GitVersionInformation.g.cs
+C:\Users\A.Mohsen\source\repos\logg\Logging\obj\Debug\net8.0\AssemblyInfo.g.cs
