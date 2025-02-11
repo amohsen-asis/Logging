@@ -339,6 +339,103 @@ namespace Logging.Controllers
             });
         }
 
+        // New batch operations endpoints
+        [HttpPost("batch/create")]
+        public async Task<IActionResult> CreateBatch([FromBody] List<Employee> employees)
+        {
+            try
+            {
+                _logger.LogInformation("Starting batch creation of {Count} employees", employees.Count);
+                
+                foreach (var employee in employees)
+                {
+                    if (!ModelState.IsValid)
+                    {
+                        _logger.LogWarning("Invalid employee data in batch creation");
+                        return BadRequest(ModelState);
+                    }
+                }
+
+                await _context.Employees.AddRangeAsync(employees);
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation("Successfully created {Count} employees in batch", employees.Count);
+                return CreatedAtAction(nameof(GetEmployees), employees);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during batch creation of employees");
+                throw;
+            }
+        }
+
+        [HttpPut("batch/update")]
+        public async Task<IActionResult> UpdateBatch([FromBody] List<Employee> employees)
+        {
+            try
+            {
+                _logger.LogInformation("Starting batch update of {Count} employees", employees.Count);
+                
+                foreach (var employee in employees)
+                {
+                    if (!ModelState.IsValid)
+                    {
+                        _logger.LogWarning("Invalid employee data in batch update");
+                        return BadRequest(ModelState);
+                    }
+
+                    var existingEmployee = await _context.Employees.FindAsync(employee.Id);
+                    if (existingEmployee == null)
+                    {
+                        _logger.LogWarning("Employee {Id} not found during batch update", employee.Id);
+                        return NotFound($"Employee with ID {employee.Id} not found");
+                    }
+
+                    _context.Entry(existingEmployee).CurrentValues.SetValues(employee);
+                }
+
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation("Successfully updated {Count} employees in batch", employees.Count);
+                return Ok(employees);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during batch update of employees");
+                throw;
+            }
+        }
+
+        [HttpDelete("batch/delete")]
+        public async Task<IActionResult> DeleteBatch([FromBody] List<int> employeeIds)
+        {
+            try
+            {
+                _logger.LogInformation("Starting batch deletion of {Count} employees", employeeIds.Count);
+                
+                var employees = await _context.Employees
+                    .Where(e => employeeIds.Contains(e.Id))
+                    .ToListAsync();
+
+                if (!employees.Any())
+                {
+                    _logger.LogWarning("No employees found for batch deletion");
+                    return NotFound("No employees found with the provided IDs");
+                }
+
+                _context.Employees.RemoveRange(employees);
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation("Successfully deleted {Count} employees in batch", employees.Count);
+                return Ok($"Successfully deleted {employees.Count} employees");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during batch deletion of employees");
+                throw;
+            }
+        }
+
         private bool EmployeeExists(int id)
         {
             return _context.Employees.Any(e => e.Id == id);
