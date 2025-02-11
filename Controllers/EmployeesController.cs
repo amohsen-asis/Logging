@@ -279,8 +279,8 @@ namespace Logging.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while dividing {Numerator} by {Denominator}", numerator, denominator);
-                return StatusCode(400, "Cannot divide by zero");
+                //_logger.LogError(ex, "Error occurred while dividing {Numerator} by {Denominator}", numerator, denominator);
+                return Ok( "Cannot divide by zero");
             }
         }
 
@@ -338,9 +338,6 @@ namespace Logging.Controllers
                 EmployeeCount = employees.Count
             });
         }
-
-        // GET: api/Employees/calculator
-        
 
         private bool EmployeeExists(int id)
         {

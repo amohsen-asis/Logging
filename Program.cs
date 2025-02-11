@@ -49,6 +49,12 @@ try
     // Add global exception middleware
     app.UseGlobalExceptionHandler();
 
+    app.UseRateLimiter(options =>
+    {
+        options.MaxRequestsPerTimeWindow = 100; // 100 requests per minute
+        options.TimeWindow = TimeSpan.FromMinutes(1);
+    });
+
     app.UseHttpsRedirection();
     app.UseAuthorization();
     app.MapControllers();

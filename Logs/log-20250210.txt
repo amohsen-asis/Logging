@@ -348,3 +348,6 @@ System.Collections.Generic.KeyNotFoundException: Employee with ID 3 was not foun
 [2025-02-10 14:50:55 INF] Starting the application {}
 [2025-02-10 14:53:53 INF] Starting the application {}
 [2025-02-10 14:54:08 ERR] Error occurred while dividing 3 by 0 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"4b79e554-8d05-4c58-a84c-263c76c69288","ActionName":"Logging.Controllers.EmployeesController.Calculator (Logging)","RequestId":"0HNA9Q7U1E805:00000005","RequestPath":"/api/Employees/calculator","ConnectionId":"0HNA9Q7U1E805"}
+[2025-02-10 16:54:06 INF] Starting the application {}
+[2025-02-10 16:54:40 ERR] Error occurred while dividing 4 by 0 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"dcce7be2-1547-4c20-9e5b-c99a9e22cecb","ActionName":"Logging.Controllers.EmployeesController.Calculator (Logging)","RequestId":"0HNA9SB77JRUD:00000001","RequestPath":"/api/Employees/calculator","ConnectionId":"0HNA9SB77JRUD"}
+[2025-02-10 16:54:43 ERR] Error occurred while dividing 4 by 0 {"SourceContext":"Logging.Controllers.EmployeesController","ActionId":"dcce7be2-1547-4c20-9e5b-c99a9e22cecb","ActionName":"Logging.Controllers.EmployeesController.Calculator (Logging)","RequestId":"0HNA9SB77JRUD:00000003","RequestPath":"/api/Employees/calculator","ConnectionId":"0HNA9SB77JRUD"}
