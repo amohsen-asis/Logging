@@ -46,17 +46,6 @@
           }
         }
       },
-      "GitVersion.MsBuild/5.12.0": {
-        "type": "package",
-        "build": {
-          "build/GitVersion.MsBuild.props": {},
-          "build/GitVersion.MsBuild.targets": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/GitVersion.MsBuild.props": {},
-          "buildMultiTargeting/GitVersion.MsBuild.targets": {}
-        }
-      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -66,6 +55,58 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Diagnostics.HealthChecks/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0",
+          "Microsoft.Net.Http.Headers": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.HealthChecks.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.HealthChecks.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
             "related": ".xml"
           }
         }
@@ -696,6 +737,38 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.FileProviders.Abstractions/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -947,6 +1020,23 @@
           }
         }
       },
+      "Microsoft.Net.Http.Headers/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0",
+          "System.Buffers": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -1011,6 +1101,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "MinVer/4.3.0": {
+        "type": "package",
+        "build": {
+          "build/MinVer.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/MinVer.targets": {}
         }
       },
       "Mono.TextTemplating/2.2.1": {
@@ -1244,6 +1343,15 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
       },
       "System.CodeDom/4.4.0": {
         "type": "package",
@@ -1881,248 +1989,6 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "GitVersion.MsBuild/5.12.0": {
-      "sha512": "dJuigXycpJNOiLT9or7mkHSkGFHgGW3/p6cNNYEKZBa7Hhp1FdX/cvqYWWYhRLpfoZOedeA7aRbYiOB3vW/dvA==",
-      "type": "package",
-      "path": "gitversion.msbuild/5.12.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "build/GitVersion.MsBuild.props",
-        "build/GitVersion.MsBuild.targets",
-        "buildMultiTargeting/GitVersion.MsBuild.props",
-        "buildMultiTargeting/GitVersion.MsBuild.targets",
-        "gitversion.msbuild.5.12.0.nupkg.sha512",
-        "gitversion.msbuild.nuspec",
-        "package_icon.png",
-        "tools/GitVersion.MsBuild.props",
-        "tools/GitVersion.MsBuild.targets",
-        "tools/net48/GitVersion.Core.dll",
-        "tools/net48/GitVersion.LibGit2Sharp.dll",
-        "tools/net48/GitVersion.MsBuild.deps.json",
-        "tools/net48/GitVersion.MsBuild.dll",
-        "tools/net48/JetBrains.Annotations.dll",
-        "tools/net48/LibGit2Sharp.dll",
-        "tools/net48/LibGit2Sharp.dll.config",
-        "tools/net48/Microsoft.Bcl.AsyncInterfaces.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.Abstractions.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.Binder.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.CommandLine.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.FileExtensions.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.Json.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.UserSecrets.dll",
-        "tools/net48/Microsoft.Extensions.Configuration.dll",
-        "tools/net48/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "tools/net48/Microsoft.Extensions.DependencyInjection.dll",
-        "tools/net48/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "tools/net48/Microsoft.Extensions.FileProviders.Physical.dll",
-        "tools/net48/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "tools/net48/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "tools/net48/Microsoft.Extensions.Hosting.dll",
-        "tools/net48/Microsoft.Extensions.Logging.Abstractions.dll",
-        "tools/net48/Microsoft.Extensions.Logging.Configuration.dll",
-        "tools/net48/Microsoft.Extensions.Logging.Console.dll",
-        "tools/net48/Microsoft.Extensions.Logging.Debug.dll",
-        "tools/net48/Microsoft.Extensions.Logging.EventLog.dll",
-        "tools/net48/Microsoft.Extensions.Logging.EventSource.dll",
-        "tools/net48/Microsoft.Extensions.Logging.dll",
-        "tools/net48/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
-        "tools/net48/Microsoft.Extensions.Options.dll",
-        "tools/net48/Microsoft.Extensions.Primitives.dll",
-        "tools/net48/Polly.dll",
-        "tools/net48/System.Buffers.dll",
-        "tools/net48/System.Diagnostics.DiagnosticSource.dll",
-        "tools/net48/System.Memory.dll",
-        "tools/net48/System.Numerics.Vectors.dll",
-        "tools/net48/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/net48/System.Text.Encodings.Web.dll",
-        "tools/net48/System.Text.Json.dll",
-        "tools/net48/System.Threading.Tasks.Extensions.dll",
-        "tools/net48/System.ValueTuple.dll",
-        "tools/net48/YamlDotNet.dll",
-        "tools/net48/gitversion.exe",
-        "tools/net48/gitversion.exe.config",
-        "tools/net48/lib/linux-arm/libgit2-b7bad55.so",
-        "tools/net48/lib/linux-arm64/libgit2-b7bad55.so",
-        "tools/net48/lib/linux-musl-arm/libgit2-b7bad55.so",
-        "tools/net48/lib/linux-musl-arm64/libgit2-b7bad55.so",
-        "tools/net48/lib/linux-musl-x64/libgit2-b7bad55.so",
-        "tools/net48/lib/linux-x64/libgit2-b7bad55.so",
-        "tools/net48/lib/osx-arm64/libgit2-b7bad55.dylib",
-        "tools/net48/lib/osx-x64/libgit2-b7bad55.dylib",
-        "tools/net48/lib/win32/arm64/git2-b7bad55.dll",
-        "tools/net48/lib/win32/x64/git2-b7bad55.dll",
-        "tools/net48/lib/win32/x86/git2-b7bad55.dll",
-        "tools/net5.0/GitVersion.Core.dll",
-        "tools/net5.0/GitVersion.LibGit2Sharp.dll",
-        "tools/net5.0/GitVersion.MsBuild.deps.json",
-        "tools/net5.0/GitVersion.MsBuild.dll",
-        "tools/net5.0/LibGit2Sharp.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.Abstractions.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.Binder.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.CommandLine.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.FileExtensions.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.Json.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.UserSecrets.dll",
-        "tools/net5.0/Microsoft.Extensions.Configuration.dll",
-        "tools/net5.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "tools/net5.0/Microsoft.Extensions.DependencyInjection.dll",
-        "tools/net5.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "tools/net5.0/Microsoft.Extensions.FileProviders.Physical.dll",
-        "tools/net5.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "tools/net5.0/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "tools/net5.0/Microsoft.Extensions.Hosting.dll",
-        "tools/net5.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "tools/net5.0/Microsoft.Extensions.Logging.Configuration.dll",
-        "tools/net5.0/Microsoft.Extensions.Logging.Console.dll",
-        "tools/net5.0/Microsoft.Extensions.Logging.Debug.dll",
-        "tools/net5.0/Microsoft.Extensions.Logging.EventLog.dll",
-        "tools/net5.0/Microsoft.Extensions.Logging.EventSource.dll",
-        "tools/net5.0/Microsoft.Extensions.Logging.dll",
-        "tools/net5.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
-        "tools/net5.0/Microsoft.Extensions.Options.dll",
-        "tools/net5.0/Microsoft.Extensions.Primitives.dll",
-        "tools/net5.0/Polly.dll",
-        "tools/net5.0/System.Diagnostics.DiagnosticSource.dll",
-        "tools/net5.0/System.Diagnostics.EventLog.dll",
-        "tools/net5.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/net5.0/System.Text.Encodings.Web.dll",
-        "tools/net5.0/System.Text.Json.dll",
-        "tools/net5.0/YamlDotNet.dll",
-        "tools/net5.0/gitversion.deps.json",
-        "tools/net5.0/gitversion.dll",
-        "tools/net5.0/gitversion.exe",
-        "tools/net5.0/gitversion.runtimeconfig.json",
-        "tools/net5.0/runtimes/linux-arm/native/libgit2-b7bad55.so",
-        "tools/net5.0/runtimes/linux-arm64/native/libgit2-b7bad55.so",
-        "tools/net5.0/runtimes/linux-musl-arm/native/libgit2-b7bad55.so",
-        "tools/net5.0/runtimes/linux-musl-arm64/native/libgit2-b7bad55.so",
-        "tools/net5.0/runtimes/linux-musl-x64/native/libgit2-b7bad55.so",
-        "tools/net5.0/runtimes/linux-x64/native/libgit2-b7bad55.so",
-        "tools/net5.0/runtimes/osx-arm64/native/libgit2-b7bad55.dylib",
-        "tools/net5.0/runtimes/osx-x64/native/libgit2-b7bad55.dylib",
-        "tools/net5.0/runtimes/win-arm64/native/git2-b7bad55.dll",
-        "tools/net5.0/runtimes/win-x64/native/git2-b7bad55.dll",
-        "tools/net5.0/runtimes/win-x86/native/git2-b7bad55.dll",
-        "tools/net5.0/runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.Messages.dll",
-        "tools/net5.0/runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
-        "tools/net6.0/GitVersion.Core.dll",
-        "tools/net6.0/GitVersion.LibGit2Sharp.dll",
-        "tools/net6.0/GitVersion.MsBuild.deps.json",
-        "tools/net6.0/GitVersion.MsBuild.dll",
-        "tools/net6.0/LibGit2Sharp.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.Binder.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.CommandLine.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.FileExtensions.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.Json.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.UserSecrets.dll",
-        "tools/net6.0/Microsoft.Extensions.Configuration.dll",
-        "tools/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "tools/net6.0/Microsoft.Extensions.DependencyInjection.dll",
-        "tools/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "tools/net6.0/Microsoft.Extensions.FileProviders.Physical.dll",
-        "tools/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "tools/net6.0/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "tools/net6.0/Microsoft.Extensions.Hosting.dll",
-        "tools/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "tools/net6.0/Microsoft.Extensions.Logging.Configuration.dll",
-        "tools/net6.0/Microsoft.Extensions.Logging.Console.dll",
-        "tools/net6.0/Microsoft.Extensions.Logging.Debug.dll",
-        "tools/net6.0/Microsoft.Extensions.Logging.EventLog.dll",
-        "tools/net6.0/Microsoft.Extensions.Logging.EventSource.dll",
-        "tools/net6.0/Microsoft.Extensions.Logging.dll",
-        "tools/net6.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
-        "tools/net6.0/Microsoft.Extensions.Options.dll",
-        "tools/net6.0/Microsoft.Extensions.Primitives.dll",
-        "tools/net6.0/Polly.dll",
-        "tools/net6.0/System.Diagnostics.EventLog.dll",
-        "tools/net6.0/YamlDotNet.dll",
-        "tools/net6.0/gitversion.deps.json",
-        "tools/net6.0/gitversion.dll",
-        "tools/net6.0/gitversion.exe",
-        "tools/net6.0/gitversion.runtimeconfig.json",
-        "tools/net6.0/runtimes/linux-arm/native/libgit2-b7bad55.so",
-        "tools/net6.0/runtimes/linux-arm64/native/libgit2-b7bad55.so",
-        "tools/net6.0/runtimes/linux-musl-arm/native/libgit2-b7bad55.so",
-        "tools/net6.0/runtimes/linux-musl-arm64/native/libgit2-b7bad55.so",
-        "tools/net6.0/runtimes/linux-musl-x64/native/libgit2-b7bad55.so",
-        "tools/net6.0/runtimes/linux-x64/native/libgit2-b7bad55.so",
-        "tools/net6.0/runtimes/osx-arm64/native/libgit2-b7bad55.dylib",
-        "tools/net6.0/runtimes/osx-x64/native/libgit2-b7bad55.dylib",
-        "tools/net6.0/runtimes/win-arm64/native/git2-b7bad55.dll",
-        "tools/net6.0/runtimes/win-x64/native/git2-b7bad55.dll",
-        "tools/net6.0/runtimes/win-x86/native/git2-b7bad55.dll",
-        "tools/net6.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
-        "tools/net6.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
-        "tools/netcoreapp3.1/GitVersion.Core.dll",
-        "tools/netcoreapp3.1/GitVersion.LibGit2Sharp.dll",
-        "tools/netcoreapp3.1/GitVersion.MsBuild.deps.json",
-        "tools/netcoreapp3.1/GitVersion.MsBuild.dll",
-        "tools/netcoreapp3.1/LibGit2Sharp.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.CommandLine.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.FileExtensions.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.Json.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.UserSecrets.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Configuration.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.FileProviders.Physical.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.FileSystemGlobbing.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Hosting.Abstractions.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Hosting.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Logging.Configuration.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Logging.Console.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Logging.Debug.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Logging.EventLog.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Logging.EventSource.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Logging.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Options.dll",
-        "tools/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
-        "tools/netcoreapp3.1/Microsoft.Win32.Registry.dll",
-        "tools/netcoreapp3.1/Polly.dll",
-        "tools/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll",
-        "tools/netcoreapp3.1/System.Diagnostics.EventLog.dll",
-        "tools/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/netcoreapp3.1/System.Security.AccessControl.dll",
-        "tools/netcoreapp3.1/System.Security.Principal.Windows.dll",
-        "tools/netcoreapp3.1/System.Text.Encodings.Web.dll",
-        "tools/netcoreapp3.1/System.Text.Json.dll",
-        "tools/netcoreapp3.1/YamlDotNet.dll",
-        "tools/netcoreapp3.1/gitversion.deps.json",
-        "tools/netcoreapp3.1/gitversion.dll",
-        "tools/netcoreapp3.1/gitversion.exe",
-        "tools/netcoreapp3.1/gitversion.runtimeconfig.json",
-        "tools/netcoreapp3.1/runtimes/linux-arm/native/libgit2-b7bad55.so",
-        "tools/netcoreapp3.1/runtimes/linux-arm64/native/libgit2-b7bad55.so",
-        "tools/netcoreapp3.1/runtimes/linux-musl-arm/native/libgit2-b7bad55.so",
-        "tools/netcoreapp3.1/runtimes/linux-musl-arm64/native/libgit2-b7bad55.so",
-        "tools/netcoreapp3.1/runtimes/linux-musl-x64/native/libgit2-b7bad55.so",
-        "tools/netcoreapp3.1/runtimes/linux-x64/native/libgit2-b7bad55.so",
-        "tools/netcoreapp3.1/runtimes/osx-arm64/native/libgit2-b7bad55.dylib",
-        "tools/netcoreapp3.1/runtimes/osx-x64/native/libgit2-b7bad55.dylib",
-        "tools/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
-        "tools/netcoreapp3.1/runtimes/win-arm64/native/git2-b7bad55.dll",
-        "tools/netcoreapp3.1/runtimes/win-x64/native/git2-b7bad55.dll",
-        "tools/netcoreapp3.1/runtimes/win-x86/native/git2-b7bad55.dll",
-        "tools/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
-        "tools/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll",
-        "tools/netcoreapp3.1/runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.Messages.dll",
-        "tools/netcoreapp3.1/runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
-        "tools/netcoreapp3.1/runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll"
-      ]
-    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -2139,6 +2005,45 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Diagnostics.HealthChecks/2.2.0": {
+      "sha512": "RNmdLy9yncTprony49cuwhyTKoROpVflGM+pKlHA1671F00QUsjoY1Oi6xoa9XsUrfRDRYlxbt2CHYCMLzMh7Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.diagnostics.healthchecks/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.HealthChecks.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.HealthChecks.xml",
+        "microsoft.aspnetcore.diagnostics.healthchecks.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.diagnostics.healthchecks.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "sha512": "Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.AspNetCore.OpenApi/8.0.0": {
@@ -3337,6 +3242,44 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Diagnostics.HealthChecks/8.0.0": {
+      "sha512": "P9SoBuVZhJPpALZmSq72aQEb9ryP67EdquaCZGXGrrcASTNHYdrUhnpgSwIipgM5oVC+dKpRXg5zxobmF9xr5g==",
+      "type": "package",
+      "path": "microsoft.extensions.diagnostics.healthchecks/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.Diagnostics.HealthChecks.dll",
+        "lib/net462/Microsoft.Extensions.Diagnostics.HealthChecks.xml",
+        "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll",
+        "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.xml",
+        "microsoft.extensions.diagnostics.healthchecks.8.0.0.nupkg.sha512",
+        "microsoft.extensions.diagnostics.healthchecks.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions/8.0.0": {
+      "sha512": "AT2qqos3IgI09ok36Qag9T8bb6kHJ3uT9Q5ki6CySybFsK6/9JbvQAgAHf1pVEjST0/N4JaFaCbm40R5edffwg==",
+      "type": "package",
+      "path": "microsoft.extensions.diagnostics.healthchecks.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.xml",
+        "microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.diagnostics.healthchecks.abstractions.nuspec"
+      ]
+    },
     "Microsoft.Extensions.FileProviders.Abstractions/9.0.0": {
       "sha512": "uK439QzYR0q2emLVtYzwyK3x+T5bTY4yWsd/k/ZUS9LR6Sflp8MIdhGXW8kQCd86dQD4tLqvcbLkku8qHY263Q==",
       "type": "package",
@@ -3748,6 +3691,19 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Microsoft.Net.Http.Headers/2.2.0": {
+      "sha512": "iZNkjYqlo8sIOI0bQfpsSoMTmB/kyvmV2h225ihyZT33aTp48ZpF6qYnXxzSXmHt8DpBAwBTX+1s1UFLbYfZKg==",
+      "type": "package",
+      "path": "microsoft.net.http.headers/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.xml",
+        "microsoft.net.http.headers.2.2.0.nupkg.sha512",
+        "microsoft.net.http.headers.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -3837,6 +3793,43 @@
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
         "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "MinVer/4.3.0": {
+      "sha512": "YNVAW3loCFW4kTwensApaZUl+7xREK75QQNOFSbsbXx2sCSm9/IHBjUHsJGn3u0UA5r/sAqrdYBNUlOFfLhUrA==",
+      "type": "package",
+      "path": "minver/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/MinVer.targets",
+        "buildMultiTargeting/MinVer.targets",
+        "minver.4.3.0.nupkg.sha512",
+        "minver.nuspec",
+        "minver.png",
+        "minver/net6.0/McMaster.Extensions.CommandLineUtils.dll",
+        "minver/net6.0/MinVer",
+        "minver/net6.0/MinVer.Lib.dll",
+        "minver/net6.0/MinVer.deps.json",
+        "minver/net6.0/MinVer.dll",
+        "minver/net6.0/MinVer.runtimeconfig.json",
+        "minver/net6.0/NuGet.Versioning.dll",
+        "minver/net7.0/McMaster.Extensions.CommandLineUtils.dll",
+        "minver/net7.0/MinVer",
+        "minver/net7.0/MinVer.Lib.dll",
+        "minver/net7.0/MinVer.deps.json",
+        "minver/net7.0/MinVer.dll",
+        "minver/net7.0/MinVer.runtimeconfig.json",
+        "minver/net7.0/NuGet.Versioning.dll",
+        "minver/netcoreapp3.1/McMaster.Extensions.CommandLineUtils.dll",
+        "minver/netcoreapp3.1/MinVer",
+        "minver/netcoreapp3.1/MinVer.Lib.dll",
+        "minver/netcoreapp3.1/MinVer.deps.json",
+        "minver/netcoreapp3.1/MinVer.dll",
+        "minver/netcoreapp3.1/MinVer.runtimeconfig.json",
+        "minver/netcoreapp3.1/NuGet.Versioning.dll",
+        "minver/netcoreapp3.1/System.ComponentModel.Annotations.dll"
       ]
     },
     "Mono.TextTemplating/2.2.1": {
@@ -4147,6 +4140,35 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
+      ]
+    },
+    "System.Buffers/4.5.0": {
+      "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+      "type": "package",
+      "path": "system.buffers/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.CodeDom/4.4.0": {
@@ -5284,10 +5306,12 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "GitVersion.MsBuild >= 5.12.0",
+      "Microsoft.AspNetCore.Diagnostics.HealthChecks >= 2.2.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
+      "Microsoft.Extensions.Diagnostics.HealthChecks >= 8.0.0",
+      "MinVer >= 4.3.0",
       "Serilog.AspNetCore >= 9.0.0",
       "Serilog.Sinks.Console >= 6.0.0",
       "Serilog.Sinks.File >= 6.0.0",
@@ -5344,11 +5368,9 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "GitVersion.MsBuild": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
+          "Microsoft.AspNetCore.Diagnostics.HealthChecks": {
             "target": "Package",
-            "version": "[5.12.0, )"
+            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
@@ -5363,6 +5385,16 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.0, )"
+          },
+          "Microsoft.Extensions.Diagnostics.HealthChecks": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "MinVer": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[4.3.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",
