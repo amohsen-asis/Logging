@@ -29,6 +29,10 @@ try
     builder.Services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+    // Add health checks
+    builder.Services.AddHealthChecks()
+        .AddCheck<DatabaseHealthCheck>("Database");
+
     // Configure Kestrel to use specific ports
     builder.WebHost.UseUrls("http://localhost:5000", "https://localhost:5001");
 
@@ -58,6 +62,9 @@ try
     app.UseHttpsRedirection();
     app.UseAuthorization();
     app.MapControllers();
+
+    // Add health check endpoint
+    app.MapHealthChecks("/health");
 
     Log.Information("Starting the application");
     app.Run();
